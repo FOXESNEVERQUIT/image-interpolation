@@ -19,8 +19,7 @@ pip install torch torchvision pillow opencv-python imageio
 # 4) RIFE HDv3 저장소 클론 및 가중치 배치
 git clone https://github.com/hzwer/ECCV2022-RIFE.git
 mkdir -p ECCV2022-RIFE/train_log
-# → 사전학습 가중치(fl ownet.pkl, IFNet_HDv3.py, RIFE_HDv3.py)를
-#    ECCV2022-RIFE/train_log 폴더에 복사
+# → 사전학습 가중치(fl ownet.pkl, IFNet_HDv3.py, RIFE_HDv3.py)를 ECCV2022-RIFE/train_log 폴더에 복사
 
 # 5) Jupyter Notebook 실행
 jupyter notebook imageinterpolation.ipynb
