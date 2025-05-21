@@ -19,28 +19,28 @@ pip install torch torchvision pillow opencv-python imageio
 # 4) RIFE HDv3 저장소 클론 및 가중치 배치
 git clone https://github.com/hzwer/ECCV2022-RIFE.git
 mkdir -p ECCV2022-RIFE/train_log
-# → 사전학습 가중치(fl ownet.pkl, IFNet_HDv3.py, RIFE_HDv3.py)를 ECCV2022-RIFE/train_log 폴더에 복사
+# → Pretrained weight(fl ownet.pkl, IFNet_HDv3.py, RIFE_HDv3.py)를 ECCV2022-RIFE/train_log 폴더에 복사
 
 # 5) Jupyter Notebook 실행
 jupyter notebook imageinterpolation.ipynb
 ````
 
 ## Usage
-1. `imageinterpolation.ipynb`에서 순서대로 셀을 실행
-2. `1.png`, `30.png` 파일을 노트북이 실행되는 디렉터리에 위치
-3. 마지막 셀 실행 후 `Z-Full.gif`가 생성
+1. 'imageinterpolation.ipynb'에서 순서대로 셀을 실행
+2. '1.png', '30.png' 파일을 ipynb 파일과 같은 높이에 위치
+3. gif 생성
 
 ## 기능 및 의의
-* **재귀적 보간**: Vision-Scale Fusion 모델(IFNet 기반 RIFE HDv3)의 `inference()`를 재귀적으로 호출하여 총 28개의 중간 프레임 생성
-* **순·역방향 루프**: 1→30→1 프레임 시퀀스를 구성해 자연스러운 왕복 애니메이션
-* **자동 패딩/크롭**: 입력 크기를 32의 배수로 맞춰 모델 내부 업/다운샘플 안정성 확보
-* **고정 출력 크기**: 최종 GIF를 226×192 픽셀로 리사이즈
-* **무한 루프**: `loop=0` 설정으로 GIF가 영구 반복 재생
+* **재귀적 보간**: Vision-Scale Fusion 모델의 inference를 재귀 호출하여 28개의 중간 프레임 생성
+* **순·역방향 루프**: 1→30→1 프레임 시퀀스로 자연스러운 왕복 애니메이션
+* **자동 패딩/크롭**: Input size를 32의 배수로 맞춰 모델의 업샘플/다운샘플 안정성 확보
+* **고정 출력 크기**: GIF를 226×192 픽셀로 리사이즈
+* **무한 루프**: 'loop=0' 설정으로 GIF 반복 재생
 
 ## Requirements
 * Python 3.8
 * PyTorch 1.x (+ CUDA 설치 시 GPU 사용 가능)
-* OpenCV (`opencv-python`), Pillow (`PIL`), ImageIO (`imageio`)
+* OpenCV(opencv-python), Pillow(PIL), ImageIO(imageio)
 
 ## License
 MIT License
