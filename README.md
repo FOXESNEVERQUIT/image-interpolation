@@ -45,6 +45,3 @@ jupyter notebook imageinterpolation.ipynb
 
 ## License
 MIT License
-
-```
-```
