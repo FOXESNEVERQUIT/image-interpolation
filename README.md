@@ -1,6 +1,6 @@
 # Image Interpolation with RIFE HDv3
 
-## 프로젝트 설명  
+## About this  
 2장의 이미지를 입력, Pretrained RIFE HDv3 모델로 부드러운 중간 프레임을 생성(= Interpolation)하고, 순방향(1→30) 및 역방향(30→1)으로 두 이미지를 이어붙여 2초 길이의 무한 루프 GIF를 출력하는 Jupyter Notebook(.ipynb) 기반 프로젝트
 
 ## Installation
